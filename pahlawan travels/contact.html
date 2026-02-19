@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Pahlawan Travel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><img src="assets/images/logo.png" alt="Logo"></div>
+        <ul class="nav-links">
+            <li><a href="index.html" data-key="nav_home">Home</a></li>
+            <li><a href="tours.html" data-key="nav_tours">Tours</a></li>
+            <li><a href="index.html#about" data-key="nav_about">About</a></li>
+            <li><a href="contact.html" data-key="nav_contact">Contact</a></li>
+            
+            
+        </ul>
+    </nav>
+
+    <section class="contact-page">
+        <div class="container">
+            <h1 data-key="contact-title">Get in Touch</h1>
+            <p class="subtitle" data-key="contact-subtitle">Have questions? Reach out to us via social media or send a message below.</p>
+
+            <div class="contact-grid">
+                <div class="social-cards">
+                    <a href="https://wa.me/998901310030" class="social-item whatsapp">
+                        <div class="icon">💬</div>
+                        <div class="text">
+                            <span>WhatsApp</span>
+                            <p>Chat with us live</p>
+                        </div>
+                    </a>
+                    
+                    <a href="https://t.me/pahlawantravel" class="social-item telegram">
+                        <div class="icon">✈️</div>
+                        <div class="text">
+                            <span>Telegram</span>
+                            <p>Fast support 24/7</p>
+                        </div>
+                    </a>
+
+                    <a href="https://instagram.com/pahlawantravel" class="social-item instagram">
+                        <div class="icon">📸</div>
+                        <div class="text">
+                            <span>Instagram</span>
+                            <p>Follow our journeys</p>
+                        </div>
+                    </a>
+
+                    <div class="other-info">
+                        <p><strong data-key="label_address_title">📍 Address:</strong> Tashkent, Uzbekistan</p>
+                        <p><strong data-key="label_phone_title">📞 Phone:</strong> +998 (90) 131-00-30</p>
+                        <p><strong data-key="label_email_title">✉️ Email:</strong> ptt2020@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <form id="contactPageForm">
+                        <div class="input-group">
+                            <input type="text" id="contactName" data-key="label_name" placeholder="Your Full Name" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" id="contactEmail" data-key="label_email" placeholder="Your Email / Phone" required>
+                        </div>
+                        <div class="input-group">
+                            <textarea id="contactMessage" data-key="label_message" placeholder="How can we help you?" rows="7" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn" data-key="btn_send">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        
+        document.getElementById("contactPageForm").onsubmit = async function(e) {
+            e.preventDefault();
+            const data = {
+                name: document.getElementById("contactName").value,
+                phone: document.getElementById("contactEmail").value,
+                tour: "CONTACT PAGE INQUIRY",
+                message: document.getElementById("contactMessage").value
+            };
+
+            try {
+                const response = await fetch('http://127.0.0.1:5000/send_booking', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({
+                        name: data.name,
+                        phone: data.phone,
+                        tour: `${data.tour}\nMessage: ${data.message}`
+                    })
+                });
+                if (response.ok) {
+                    alert("✅ Message sent! We will contact you soon.");
+                    this.reset();
+                }
+            } catch (error) {
+                alert("❌ Error: Is app.py running?");
+            }
+        };
+    </script>
+    <script type="text/javascript">
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'en', 
+        includedLanguages: 'en,ru,uz', 
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+    }, 'google_translate_element');
+}
+</script>
+<div id="google_translate_element" style="display:none"></div>
+
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            includedLanguages: 'en,ru,uz',
+            autoDisplay: false
+        }, 'google_translate_element');
+    }
+</script>
+<script src="main.js"></script>
+
+
+</body>
+</html>

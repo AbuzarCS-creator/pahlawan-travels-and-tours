@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><img src="assets/images/logo.png" alt=""></div>
+            <ul class="nav-links">
+                <li><a href="tours.html" data-key="nav_tours">Tours 
+                </a></li>
+                <li><a href="#about" data-key="nav_about">About</a></li>
+                <li><a href="contact.html" data-key="nav_contact">Contact</a></li>
+                
+            </ul>
+            
+
+
+    </nav>
+</header>
+<section id="hero" class="hero-section">
+    <div class="hero-content"><h1>Discover The Silk Road</h1>
+    <p data-key="hero_subtitle">Authentic journeys across Uzbekistan since 2010</p>
+<button class="cta-button"  onclick="openPlanTrip()">Plan Your Trip</button>
+    
+
+</section>
+<section id="about" class="about-section">
+    <div class="container">
+        <h2 class="reveal" >About Pahlawan Travel and Tours</h2>
+        <p class="reveal" >
+            Since 2010, <strong>**Pahlawan Travel and Tours**</strong> has been dedicated to showcasing the breathtaking beauty and rich history of Uzbekistan. 
+                We specialize in creating authentic journeys that connect travelers with the legendary heart of the Silk Road.
+        </p>
+        <p class="reveal" >Our team of local experts ensures that every tour is not just a trip, but a deep immersion into the culture, 
+           traditions, and legendary hospitality of our homeland. From the majestic squares of Samarkand to the ancient 
+           streets of Khiva, we open the doors to the real Uzbekistan.</p>
+    </div>
+</section>
+<section id="tours" class="tours-section">
+    <div class="container">
+        <h2 class="reveal" >Popular Tour Packages</h2>
+        <div class="home-grid"> <div class="home-card reveal">
+                <div class="tour-image">
+                    <img src="https://api.dunyo.info/public/uploads/files/1725366157976_145png.webp" alt="Ziyarat Tour">
+                    <div class="tour-duration">7 Days / 6 Nights</div>
+                </div>
+                <div class="tour-info">
+                    <h3 data-key="tour_1_title">Ziyarat Tour Uzbekistan</h3>
+                    <p data-key="tour_1_desc">A spiritual journey through Tashkent, Samarkand, Bukhara, and the scenic Chimgan Mountains.</p>
+                    <ul class="tour-highlights">
+                        <li data-key="tour_1_feat_1"> High-speed "Afrosiyob" train</li>
+                        <li data-key="tour_1_feat_2"> Imam Al-Bukhari & Registan Square</li>
+                    </ul>
+                    <div class="tour-footer">
+                        <span class="price">From $50</span>
+                        <a href="tours.html#uzbekistan" class="btn-small">Full Plan</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="home-card reveal">
+                <div class="tour-image">
+                    <img src="https://img.freepik.com/premium-photo/beautiful-aerial-view-2500yearold-uzbek-city-khiva-ancient-itchan-kala-fortress-mosque-market-houses-historic-center-khiva-unesco-world-heritage-site-uzbekistan-central-asia_941247-2606.jpg" alt="3 Stan Tour">
+                    <div class="tour-duration">11 Days / 10 Nights</div>
+                </div>
+                <div class="tour-info">
+                    <h3 data-key="tour_2_title">Central Asia Discovery</h3>
+                    <p data-key="tour_2_desc">The ultimate cross-border experience covering Kazakhstan, Kyrgyzstan, and Uzbekistan.</p>
+                    <ul class="tour-highlights">
+                        <li data-key="tour_2_feat_1"> Charyn Canyon & Issyk-Kul Lake</li>
+                        <li data-key="tour_2_feat_2"> Almaty & Bishkek City Tours</li>
+                    </ul>
+                    <div class="tour-footer">
+                        <span class="price">From $60</span>
+                        <a href="tours.html#3stan" class="btn-small">Full Plan</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="home-card reveal">
+                <div class="tour-image">
+                    <img src="https://images.unsplash.com/photo-1513326738677-b964603b136d?q=80&w=1000&auto=format&fit=crop" alt="Russia Tour">
+                    <div class="tour-duration">8 Days / 6 Nights</div>
+                </div>
+                <div class="tour-info">
+                    <h3 data-key="tour_3_title">Discovery Russia</h3>
+                    <p data-key="tour_3_desc">Explore the grandeur of Moscow, the imperial beauty of St. Petersburg, and the history of Kazan.</p>
+                    <ul class="tour-highlights">
+                        <li data-key="tour_3_feat_1"> Moscow Metro & Arbat Street</li>
+                        <li data-key="tour_3_feat_2"> Sapsan High-speed Bullet Train</li>
+                    </ul>
+                    <div class="tour-footer">
+                        <span class="price">From $70</span>
+                        <a href="tours.html#russia" class="btn-small">Full Plan</a>
+                    </div>
+                </div>
+            </div>
+
+        </div> </div> </section>
+        <div id="planModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closePlanModal()">&times;</span>
+        <h2>Plan Your Custom Trip</h2>
+        <p>Tell us your preferences and we'll create a dream itinerary!</p>
+        
+        <form id="planForm">
+            <div class="input-group">
+                <input type="text" id="planName" placeholder="Your Full Name" required>
+            </div>
+            <div class="input-group">
+                <input type="tel" id="planPhone" placeholder="Phone Number" required>
+            </div>
+            <div class="input-group">
+                <input type="text" id="planDate" placeholder="When are you coming? (Month/Year)">
+            </div>
+            <div class="input-group">
+                <select id="planBudget" class="modal-select">
+                    <option value="" disabled selected>Select Budget Level</option>
+                    <option value="Economy">Economy</option>
+                    <option value="Comfort">Comfort</option>
+                    <option value="Luxury/VIP">Luxury / VIP</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <textarea id="planDetails" placeholder="Interests (History, Food, Mountains...)" rows="3"></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Get My Plan</button>
+        </form>
+    </div>
+</div>
+
+    <script src="main.js"></script>
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-info">
+            <h3>Pahlawan Travel & Tours</h3>
+            <p>Your trusted partner in Uzbekistan since 2010. We create memories that last a lifetime.</p>
+        </div>
+        
+        <div class="footer-contact" id="contact">
+            <h4>Contact Us</h4>
+            <p>📍 Tashkent, Uzbekistan</p>
+            <p>📞 +998 (90) 131-00-30</p>
+            <p>✉️ ptt2020@gmail.com</p>
+        </div>
+
+        <div class="footer-social">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+                <span>Instagram</span> | <span>Telegram</span> | <span>Facebook</span>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2024 Pahlawan Travel & Tours. All Rights Reserved.
+    </div>
+</footer>
+
+
+
+
+
+</body>
+</html>

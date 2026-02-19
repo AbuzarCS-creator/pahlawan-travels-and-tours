@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Tours - Pahlawan Travel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><img src="assets/images/logo.png" alt="Logo" class="logo-img"></div>
+        <ul class="nav-links">
+            <li><a href="index.html#about">About</a></li> 
+            <li><a href="tours.html">Tours</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            
+        </ul>
+        
+    </nav>
+
+    <section class="page-header">
+        <h1 data-key="tours_title">Our Tour Packages</h1>
+        <p data-key="tours_subtitle">Explore the best of Uzbekistan and other countries with our curated tours</p>
+    </section>
+
+    <section class="tours-section">
+        <div class="container">
+            <div class="tours-grid">
+                
+                <div class="tour-card detail-card reveal" id="uzbekistan">
+                    <div class="tour-image">
+                        <img src="https://api.dunyo.info/public/uploads/files/1725366157976_145png.webp" alt="Uzbekistan">
+                        <div class="tour-duration" data-key="tour_1_duration">7 Days / 6 Nights</div>
+                    </div>
+                    <div class="tour-info">
+                        <span class="badge" data-key="tag_bestseller">Bestseller</span>
+                        <h3 data-key="tour_1_title">Ziyarat Tour Uzbekistan</h3>
+                        <p class="price-tag" data-key="label_from">From $50</p>
+                        <div class="full-itinerary">
+                            <h4 data-key="label_route">Route:</h4>
+                            <p data-key="tour_1_route_desc">Tashkent – Samarkand – Bukhara – Chimgan Mountains.</p>
+                            <ul>
+                                <li data-key="tour_1_li_1"> Afrosiyob High-speed train</li>
+                                <li data-key="tour_1_li_2"> Imam Al-Bukhari Complex</li>
+                            </ul>
+                        </div>
+                        <button class="cta-button" data-key="btn_book" onclick="handleBooking('Ziyarat Tour Uzbekistan')">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="tour-card detail-card reveal" id="3stan">
+                    <div class="tour-image">
+                        <img src="https://img.freepik.com/premium-photo/beautiful-aerial-view-2500yearold-uzbek-city-khiva-ancient-itchan-kala-fortress-mosque-market-houses-historic-center-khiva-unesco-world-heritage-site-uzbekistan-central-asia_941247-2606.jpg" alt="3 Stans">
+                        <div class="tour-duration" data-key="tour_2_duration">11 Days / 10 Nights</div>
+                    </div>
+                    <div class="tour-info">
+                        <h3 data-key="tour_2_title">Central Asia Discovery</h3>
+                        <p class="price-tag"><span data-key="label_from">From</span> From $60</p>
+                        <div class="full-itinerary">
+                            <h4 data-key="label_highlights">Highlights:</h4>
+                            <p data-key="tour_2_desc">Kazakhstan, Kyrgyzstan, and Uzbekistan in one epic journey.</p>
+                        </div>
+                        <button class="cta-button" data-key="btn_book" onclick="handleBooking('Central Asia Discovery')">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="tour-card detail-card reveal" id="russia">
+                    <div class="tour-image">
+                        <img src="https://images.unsplash.com/photo-1513326738677-b964603b136d?q=80&w=1000&auto=format&fit=crop" alt="Russia">
+                        <div class="tour-duration" data-key="tour_3_duration">8 Days / 6 Nights</div>
+                    </div>
+                    <div class="tour-info">
+                        <h3 data-key="tour_3_title">Discovery Russia</h3>
+                        <p class="price-tag"><span data-key="label_from">From</span>From $70</p>
+                        <div class="full-itinerary">
+                            <h4 data-key="label_cities">Cities:</h4>
+                            <p data-key="tour_3_desc">Moscow, St. Petersburg, and the historical Kazan.</p>
+                        </div>
+                        <button class="cta-button" data-key="btn_book" onclick="handleBooking('Discovery Russia')">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="tour-card detail-card reveal" id="kaz-kyr">
+                    <div class="tour-image">
+                        <img src="https://blog.ostrovok.ru/wp-content/uploads/2024/03/1%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F-7.jpg" alt="Kazakhstan">
+                        <div class="tour-duration" data-key="tour_4_duration">11 Days / 9 Nights</div>
+                    </div>
+                    <div class="tour-info">
+                        <h3 data-key="tour_4_title">Kazakhstan & Kyrgyzstan Adventure</h3>
+                        <p class="price-tag">Full Board Package</p>
+                        <div class="full-itinerary">
+                            <h4 data-key="label_route">Route:</h4>
+                            <ul>
+                                <li data-key="tour_4_li_1">🇰🇿 Almaty & Charyn Canyon</li>
+                                <li data-key="tour_4_li_2">🇰🇬 Bishkek, Issyk Kul Lake & Karakol</li>
+                                <p class="price-tag"><span >From</span> $55</p>
+                            </ul>
+                        </div>
+                        <button class="cta-button" data-key="btn_book" onclick="handleBooking('Kazakhstan & Kyrgyzstan Adventure')">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="tour-card detail-card reveal" id="turkiye">
+                    <div class="tour-image">
+                        <img src="https://blog.ostrovok.ru/wp-content/uploads/2025/02/13%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F-1.jpg" alt="Turkey">
+                        <div class="tour-duration" data-key="tour_5_duration">10 Days / 7 Nights</div>
+                    </div>
+                    <div class="tour-info">
+                        <h3 data-key="tour_5_title">Rare Türkiye Heritage</h3>
+                        <p class="price-tag" data-key="tour_5_price">From $75</p>
+                        <div class="full-itinerary">
+                            <h4 data-key="label_special">Special Visit:</h4>
+                            <p data-key="tour_5_desc">Istanbul, Ankara, Gaziantep, and Sanliurfa.</p>
+                        </div>
+                        <button class="cta-button" data-key="btn_book" onclick="handleBooking('Rare Türkiye Heritage')">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="tour-card detail-card reveal" id="iraq">
+                    <div class="tour-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlbBynDKe8Qhyv_kTcCmy7n256ZzRmE-SIpw&s" alt="Iraq">
+                        <div class="tour-duration" data-key="tour_6_duration">9 Days / 7 Nights</div>
+                    </div>
+                    <div class="tour-info">
+                        <h3 data-key="tour_6_title">Islamic Iraq Spiritual Tour</h3>
+                        <p class="price-tag" data-key="tour_6_price">Guided Heritage Tour</p>
+                        <div class="full-itinerary">
+                            <h4 data-key="label_shrines">Shrines:</h4>
+                            <p data-key="tour_6_desc">Baghdad, Karbala, Najaf, and historical Basra.</p>
+                            <p class="price-tag" >From $65</p>
+                        </div>
+                        <button class="cta-button" data-key="btn_book" onclick="handleBooking('Islamic Iraq Spiritual Tour')">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="tour-card detail-card reveal" id="4stans">
+                    <div class="tour-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzvkYPJCkB83-H6JZhLZrgLp9bJlmcfHcB5Q&s" alt="4 Stans">
+                        <div class="tour-duration" data-key="tour_7_duration">11 Days / 10 Nights</div>
+                    </div>
+                    <div class="tour-info">
+                        <h3 data-key="tour_7_litle">4-Stans Grand Silk Road</h3>
+                        <p class="price-tag" data-key="tour_7_price">Best Cross-Border Tour</p>
+                        <div class="full-itinerary">
+                            <h4 data-key="label_countries">Countries:</h4>
+                            <p data-key="tour_7_desc">Uzbekistan, Tajikistan, Kyrgyzstan, and Kazakhstan.</p>
+                            <p class="price-tag" >From $90</p>
+                        </div>
+                        <button class="cta-button" data-key="btn_book" onclick="handleBooking('4-Stans Grand Silk Road')">Book Now</button>
+                    </div>
+                </div>
+
+            </div> </div> </section>
+            <div id="bookingModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <h2 id="modalTourName">Book Your Tour</h2>
+        <p>Leave your details and we will contact you shortly.</p>
+        
+        <form id="bookingForm">
+            <input type="hidden" id="tourField">
+            <div class="input-group">
+                <input type="text" id="userName" placeholder="Your Full Name" required>
+            </div>
+            <div class="input-group">
+                <input type="tel" id="userPhone" placeholder="Phone Number (e.g. +7...)" required>
+            </div>
+            <button type="submit" class="submit-btn">Send Request</button>
+        </form>
+    </div>
+</div>
+
+
+
+    <script src="main.js"></script>
+    <script>
+const modal = document.getElementById("bookingModal");
+
+
+function handleBooking(tourName) {
+    document.getElementById("modalTourName").innerText = tourName;
+    document.getElementById("tourField").value = tourName;
+    modal.style.display = "block";
+}
+
+
+function closeModal() {
+    modal.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+    if (event.target == modal) closeModal();
+}
+
+
+document.getElementById("bookingForm").onsubmit = async function(e) {
+    e.preventDefault();
+    
+    const data = {
+        name: document.getElementById("userName").value,
+        phone: document.getElementById("userPhone").value,
+        tour: document.getElementById("tourField").value
+    };
+
+    try {
+        const response = await fetch('http://127.0.0.1:5000/send_booking', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(data)
+        });
+
+        if (response.ok) {
+            alert("✅ Success! Check your Telegram.");
+            closeModal();
+            this.reset();
+        }
+    } catch (error) {
+        alert("❌ Error: Is app.py running?");
+    }
+};
+</script>
+
+
+
+
+
+</body>
+</html>
